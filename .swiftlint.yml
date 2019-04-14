@@ -1,0 +1,22 @@
+disabled_rules: # rule identifiers to exclude from running
+  - nesting
+  - trailing_whitespace
+
+line_length: 195
+
+file_length:
+  warning: 300
+  error: 400
+
+variable_name:
+  min_length: 1 # only warning
+  max_length: # warning and error
+    warning: 50
+    error: 80
+
+unabled_rules:
+  - force_unwrapping 
+
+excluded: # paths to ignore during linting. Takes precedence over `included`.
+  - Carthage
+  - Pods

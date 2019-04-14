@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="V86-tO-79d">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Root Navigation Controller-->
+        <scene sceneID="k7N-Xm-prQ">
+            <objects>
+                <navigationController id="V86-tO-79d" customClass="RootNavigationController" customModule="MovieCatalog" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mQp-zU-Hnb">
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q6g-q5-FSy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-629" y="89"/>
+        </scene>
+        <!--Movie Catalog-->
+        <scene sceneID="nTo-Yu-gPu">
+            <objects>
+                <viewController storyboardIdentifier="CatalogViewControllerId" id="mLg-Qi-fwc" customClass="CatalogViewController" customModule="MovieCatalog" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wNv-xT-696">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="120" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LhP-xx-FLP">
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="mLg-Qi-fwc" id="IN7-5B-Jtw"/>
+                                    <outlet property="delegate" destination="mLg-Qi-fwc" id="WNh-wn-auK"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="LhP-xx-FLP" firstAttribute="leading" secondItem="mDO-cL-AfM" secondAttribute="leading" id="1Ll-M3-icF"/>
+                            <constraint firstItem="mDO-cL-AfM" firstAttribute="trailing" secondItem="LhP-xx-FLP" secondAttribute="trailing" id="Gk7-Xr-9mm"/>
+                            <constraint firstItem="mDO-cL-AfM" firstAttribute="bottom" secondItem="LhP-xx-FLP" secondAttribute="bottom" id="OWh-wp-oYh"/>
+                            <constraint firstItem="LhP-xx-FLP" firstAttribute="top" secondItem="mDO-cL-AfM" secondAttribute="top" id="WgZ-DY-aWB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mDO-cL-AfM"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Movie Catalog" id="4Mh-ca-CM1"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="tableView" destination="LhP-xx-FLP" id="mSu-fA-2e4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ew5-bn-gW7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="245" y="89"/>
+        </scene>
+    </scenes>
+</document>
